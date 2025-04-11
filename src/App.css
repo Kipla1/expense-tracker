@@ -1,19 +1,152 @@
+html{
+  background-color: #f6ddcc ;
+}
+.icon{
+  margin-right: 10px;
+}
+
 #root {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Align icon and heading vertically */
+  margin-left: 20px;
 }
 
 .head{
-  color: darkslategrey;
+  color: #C70039;
   text-align: left;
   margin-bottom: 10px;
 }
 
 .head-em{
-  text-emphasis: italic;
   color: gray;
   display: block;
+  text-align: justify;
+  margin-left: 20px;
+  font-size: large;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
 
 }
-.table{
-  border: darkgrey;
+
+.submission-form{
+  margin-top: 20px;
+  justify-self: left;
+  width: 350px;
+  height: 400px;
+  border-radius: 10px;
+  margin-right: 20px; /* Add spacing between the form and the table */
+  border-color: black; /* Set the border color to black */
+  background-color:#DAF7A6 ;
+  text-align: center;
 }
+.submission-form:hover{
+  transform: translateX(20px);
+  transform: translateY(-10px);
+  z-index: 3;
+  transition-duration: 1.1s;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search {
+  height: 20px;
+  width: 200px;
+  margin-bottom: 10px; /* Add spacing below the search bar */
+  align-self: flex-start; /* Align the search bar to the left */
+  margin-top: 20px;
+}
+
+.table {
+  border-radius: 15px;
+  border: hidden;
+  width: 950px;
+  height: auto;
+  border-spacing: 0;
+}
+
+.table tbody tr {
+  transition: transform 0.2s ease, z-index 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.table tbody tr:hover {
+  transform: translateY(-5px); /* Move the entire row forward (upward) */
+  z-index: 1; /* Bring the hovered row forward */
+  background-color: #f0f0f0; /* Optional: Change background color for better visibility */
+}
+
+.table td, .table th {
+  padding: 10px;
+  text-align: left;
+}
+
+.table-head{
+  border-radius: 20px;
+  height: 40px;
+
+  background-color: #1c1a1a;
+  color: white;
+}
+
+.data{
+  border-radius: 10px ;
+  background-color: #d5d8dc;
+  height: 90px;
+}
+
+.inputArea{
+  margin: 12px;
+  height: 25px;
+  width: 250px;
+  text-transform: capitalize;
+  text-rendering: optimizeSpeed;
+  font-size: large;
+
+}.inputArea:hover{
+  transform: translateY(-7px);
+  transition-duration: 1.2s;
+  transition: ease-in-out;
+  z-index: 1;
+}
+
+.dateInput{
+  margin: 12px;
+  height: 25px;
+  width: 250px;
+  text-transform: uppercase;
+  text-rendering: optimizeSpeed;
+  font-size: x-large;
+  text-align: center;
+}
+.submitBtn{
+  width: 170px;
+  height: 50px;
+  font-size: x-large;
+  border-radius: 10px;
+  border: none;
+}
+
+.submitBtn:hover{
+  background-color: black;
+  color: white;
+  transition-duration: 0.9s;
+  transition: ease-in-out;
+  transform: translateY(-7px);
+  z-index: 6;
+}
+

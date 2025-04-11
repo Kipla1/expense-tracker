@@ -1,19 +1,26 @@
-// import { useState } from 'react'
-import './App.css'
-import Table from './Table'
+import React from 'react';
+import './App.css';
+import Table from './Table';
+import SubmissionForm from './SubmissionForm';
+import Intro from './Intro';
+import Icon from './Icon';
 
-function App() {
- 
+const App = () => {
   return (
-    <>
-      <div>
-        <h1 className='head'>EXPENSE TRACKER</h1>
-        <p className='head-em'>*start taking control of your finances</p>
-        <Table></Table>
-         
+    <div id="root">
+      <div className="header-container">
+        <Icon />
+        <h1 className="head">EXPENSE TRACKER</h1>
       </div>
-    </>
-  )
-}
+      <Intro />
+      <div className="container">
+        <SubmissionForm />
+        <div className="table-container">
+          <Table />
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default App
+export default App;
