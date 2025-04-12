@@ -6,6 +6,7 @@ import Intro from './Intro';
 import Icon from './Icon';
 
 const App = () => {
+  
   return (
     <div id="root">
       <div className="header-container">
