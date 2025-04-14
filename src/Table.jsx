@@ -7,7 +7,7 @@ const Table = () => {
   const [myExpenses, setMyExpenses] = useState([]);
 
   useEffect(() => {
-    fetch('https://expense-tracker-json-server.vercel.app/myExpenses')
+    fetch('https://xp-tracker-zeta.vercel.app/myExpenses')
       .then((response) => response.json())
       .then((data) => setMyExpenses(data))
       .catch((error) => console.error('Error fetching data:', error));

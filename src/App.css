@@ -289,10 +289,10 @@ html {
   animation: fadeIn 0.5s ease-in;
 }
 
-/* Price column formatting */
-.price-column {
+/* Amount column formatting */
+.amount-column {
   font-weight: bold;
-  color: #C70039;
+  color: black;
 }
 
 /* Category badges */
@@ -304,4 +304,3 @@ html {
   color: white;
   background-color: #6c757d;
 }
-

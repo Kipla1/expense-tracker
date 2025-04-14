@@ -5,7 +5,7 @@ function InputArea(){
     const [expense, setExpense] = useState('');
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState('');
-    const [amount, setAmount] = useState('');
+    const [price, setAmount] = useState('');
     const [date, setDate] = useState('');
 
     const handleSubmit = (event) =>{
@@ -15,13 +15,13 @@ function InputArea(){
         expense: expense,
         description: description,
         category: category,
-        amount: parseFloat(amount), // Changed from amount to price to match Table.jsx
+        price: price, 
         date: date,
       }
 
       console.log(newExpense)
 
-      fetch('https://expense-tracker-json-server.vercel.app/myExpenses', {
+      fetch('https://xp-tracker-zeta.vercel.app/myExpenses', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newExpense),
@@ -50,7 +50,7 @@ function InputArea(){
     
   return (
     <>
-    <div>
+    <form className="inputForm">
           <input
         className="inputArea"
         type="text"
@@ -76,8 +76,8 @@ function InputArea(){
       <input
         className="inputArea"
         type="number"
-        placeholder="Enter Amount"
-        value={amount}
+        placeholder="Enter Price"
+        value={price}
         onChange={(e)=> setAmount(e.target.value)}
         required
       />
@@ -92,7 +92,7 @@ function InputArea(){
         Submit
       </button>
       
-    </div>
+    </form>
     </>
   )
 }
