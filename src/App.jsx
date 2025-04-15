@@ -1,5 +1,3 @@
-// 1. First, modify your App.jsx to add state for filtered expenses and search handling
-// App.jsx
 import React, { useState } from 'react';
 import './App.css';
 import Table from './Table';
@@ -33,10 +31,8 @@ const App = () => {
     }
   ]);
   
-  // Add state for search term
   const [searchTerm, setSearchTerm] = useState('');
   
-  // Filter expenses based on search term
   const filteredExpenses = expenses.filter(expense => {
     const searchLower = searchTerm.toLowerCase();
     return (
@@ -45,7 +41,6 @@ const App = () => {
     );
   });
   
-  // Handle search changes
   const handleSearchChange = (term) => {
     setSearchTerm(term);
   };

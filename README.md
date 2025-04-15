@@ -7,9 +7,12 @@ An intuitive and user-friendly web application for tracking personal expenses.
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Future Enhancements](#future-enhancements)
+- [Contributing](#contributing)
 
 ## Overview
 
@@ -21,6 +24,35 @@ Expense Tracker is a React-based web application designed to help users monitor 
 - **View Expenses**: Display all recorded expenses in a neatly organized table
 - **Responsive Design**: Works seamlessly across desktop and mobile devices
 - **Visual Feedback**: Smooth animations and visual cues enhance user experience
+
+## Technology Stack
+
+- **React**: Front-end UI library
+- **CSS3**: Styling with custom animations and responsive design
+- **JavaScript (ES6+)**: Core programming language
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Kipla1/expense-tracker.git
+   cd expense-tracker
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to:
+   ```
+   http://localhost:5173
+   ```
 
 ## Usage
 
@@ -73,4 +105,14 @@ expense-tracker/
 - Add budget setting and tracking features
 - Implement user authentication for multi-user support
 
-Created by Oscar.
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+
+
+Created with ❤️ by Oscar
