@@ -1,9 +1,12 @@
+// 1. First, modify your App.jsx to add state for filtered expenses and search handling
+// App.jsx
 import React, { useState } from 'react';
 import './App.css';
 import Table from './Table';
 import SubmissionForm from './SubmissionForm';
 import Intro from './Intro';
 import Icon from './Icon';
+import Searchbar from './Searchbar';
 
 const App = () => {
   const [expenses, setExpenses] = useState([
@@ -29,6 +32,23 @@ const App = () => {
       date: "06-04-2025"
     }
   ]);
+  
+  // Add state for search term
+  const [searchTerm, setSearchTerm] = useState('');
+  
+  // Filter expenses based on search term
+  const filteredExpenses = expenses.filter(expense => {
+    const searchLower = searchTerm.toLowerCase();
+    return (
+      expense.expense.toLowerCase().includes(searchLower) || 
+      expense.description.toLowerCase().includes(searchLower)
+    );
+  });
+  
+  // Handle search changes
+  const handleSearchChange = (term) => {
+    setSearchTerm(term);
+  };
 
   return (
     <div id="root">
@@ -40,7 +60,8 @@ const App = () => {
       <div className="container">
         <SubmissionForm expenses={expenses} setExpenses={setExpenses} />
         <div className="table-container">
-          <Table expenses={expenses} />
+          <Searchbar onSearchChange={handleSearchChange} />
+          <Table expenses={filteredExpenses} />
         </div>
       </div>
     </div>
